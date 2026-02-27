@@ -27,10 +27,24 @@ st.set_page_config("Class Attention App", layout="centered")
 st.title("📊 Class Attention")
 st.subheader("Attention Level")
 
-uploaded_file = st.file_uploader(
-    "📤 Upload classroom image",
-    type=["jpg", "jpeg", "png"]
+st.subheader("Select Image Source")
+
+source = st.radio(
+    "Choose how you want to provide the image:",
+    ("📷 Open Camera", "🖼️ Upload Image")
 )
+
+uploaded_file = None
+camera_image = None
+
+if source == "📷 Open Camera":
+    camera_image = st.camera_input("Capture classroom image")
+
+elif source == "🖼️ Upload Image":
+    uploaded_file = st.file_uploader(
+        "Upload classroom image",
+        type=["jpg", "jpeg", "png"]
+    )
 
 # Initialize session state
 if "last_result" not in st.session_state:
@@ -39,11 +53,14 @@ if "last_result" not in st.session_state:
 # -------------------------------
 # 📸 TEST ATTENTION
 # -------------------------------
-if uploaded_file is not None:
-    st.success("✅ Image uploaded")
+
+image_input = uploaded_file if uploaded_file else camera_image
+
+if image_input is not None:
+    st.success("✅ Image received")
 
     if st.button("📷 Test Attention"):
-        image = Image.open(uploaded_file).convert("RGB")
+        image = Image.open(image_input).convert("RGB")
         image.thumbnail((1024, 1024))  # Azure safe size
 
         buffer = io.BytesIO()
