@@ -20,6 +20,19 @@ https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
 
 ---
 
+🛠️ Technologies Used
+
+Python
+Streamlit
+Azure Custom Vision
+Azure Virtual Machine (Ubuntu)
+Streamlit Cloud
+systemd
+REST APIs
+CSV file storage
+Git & GitHub (CI/CD)
+
+
 ## 🚀 Features
 
 ### 👩‍🏫 Teacher Module
@@ -109,22 +122,3 @@ cd classVision-AI-azure
 pip install -r requirements.txt
 streamlit run app.py
 
-🛠️ Technologies Used
-
-Python
-
-Streamlit
-
-Azure Custom Vision
-
-Azure Virtual Machine (Ubuntu)
-
-Streamlit Cloud
-
-systemd
-
-REST APIs
-
-CSV file storage
-
-Git & GitHub (CI/CD)
