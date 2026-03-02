@@ -1,93 +1,130 @@
-🎓 ClassVision AI – Classroom Attention Monitoring System
+# 🎓 ClassVision AI – Classroom Attention Monitoring System
 
-ClassVision AI is an AI-powered classroom attention monitoring web application built using Streamlit and Azure Custom Vision.
-The app analyzes student attention from images and records attendance automatically.
-To keep the application running 24/7, it is deployed on an Azure Virtual Machine.
+ClassVision AI is an **AI-powered classroom attention monitoring web application** built using **Streamlit** and **Azure Custom Vision**.  
+The application analyzes student attention from images and **automatically records attendance**.
+
+The project demonstrates **end-to-end AI + Cloud deployment**, including:
+- AI model training
+- Web application development
+- 24/7 deployment using cloud infrastructure
+- CI/CD via GitHub
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Streamlit Cloud (Current Deployment):**  
+https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
+
+> The app is currently deployed on **Streamlit Cloud**, which automatically redeploys the latest code on every GitHub push.
+
+---
+
+## 🚀 Features
+
+### 👩‍🏫 Teacher Module
+- Login & Signup
+- Start attention monitoring sessions
+- Capture image using camera or upload image
+- Analyze student attention using AI
+- Automatic attendance recording
+- View and filter attendance records
+- Download attendance reports (CSV)
+- Edit teacher profile
+
+---
+
+### 🎓 Student Module
+- Login & Signup
+- Study monitoring using camera or image upload
+- Attention prediction:
+  - Focused
+  - Looking Away
+  - Sleeping
+- Automatic attendance saving
+- View personal attendance history
+- Study score calculation
+- Edit student profile
+
+---
+
+## 🧠 AI Model
+
+- Trained using **Azure Custom Vision**
+- Attention classification categories:
+  - Focused
+  - Looking_Away
+  - Sleeping
+- Integrated into the app using **Azure Custom Vision Prediction REST API**
+
+---
+
+## ☁️ Cloud Deployment Journey
+
+### 🔹 Initial Deployment (Azure Virtual Machine)
+
+Initially, the application could run **only while the local terminal was open**.  
+Closing the terminal would stop the application.
+
+To solve this, the app was deployed on an **Azure Ubuntu Virtual Machine**.
+
+#### Why Azure VM?
+- App runs **24/7**, even after system shutdown
+- Accessible via **public IP**
+- Independent of local machine
+- Suitable for real-time AI applications
+- **systemd service** configured so the app auto-starts when the VM boots
+
+Example: http://<VM_PUBLIC_IP>:8501
 
 
-🚀 Features
+---
 
-👩‍🏫 Teacher
-Login & Signup
-Start attention monitoring sessions
-Capture image or upload image
-Analyze student attention using AI
-Automatic attendance recording
-View & filter attendance records
-Download attendance report (CSV)
-Edit teacher profile
+### 🔹 Current Deployment (Streamlit Cloud)
 
+After the Azure subscription ended, the application was migrated to **Streamlit Cloud**.
 
-🎓 Student
-Login & Signup
-Study monitoring using camera or image upload
-Attention prediction (Focused / Looking Away / Sleeping)
-Automatic attendance saving
-View personal attendance history
-Study score calculation
-Edit student profile
+#### Benefits of Streamlit Cloud:
+- No VM or billing required
+- Automatic deployment from GitHub
+- App stays live even when:
+  - Laptop is off
+  - VS Code is closed
+- Ideal for demos, portfolios, and interviews
+
+Live App: https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
 
 
-🧠 AI Model
-Trained using Azure Custom Vision
-Attention classes
-Focused
-Looking_Away
-Sleeping
-Integrated using Azure Prediction REST API
+---
 
+## ▶️ Run the Application Locally
 
-☁️ Azure Virtual Machine Deployment
+If the cloud deployment is unavailable, the app can be run locally.
 
-Initially, the app was running only while the local terminal was open.
-After closing the terminal, the application stopped.
+### 🖥️ Local Setup
 
-To solve this problem, the application was deployed on an Azure Virtual Machine.
-
-Why Azure VM?
-
-App remains live even after system shutdown
-Accessible using a public IP
-Suitable for real-time deployment
-Works independently of local system
-A system service (systemd) is configured so the app automatically starts when the VM boots.
-
-
-▶️ Run the Application
-🖥️ Run Locally (Without Azure)
-
-If the Azure subscription ends, the app can still be run locally:
-
+```bash
 git clone https://github.com/asthakumari1117-hub/classVision-AI-azure.git
 cd classVision-AI-azure
 pip install -r requirements.txt
 streamlit run app.py
 
-App will run at:
-
-http://localhost:8501
-
-⚠️ Note:
-The app will stop when the terminal is closed.
-
-
-☁️ Run on Azure VM (Live)
-
-The app is deployed on an Azure Ubuntu VM and runs continuously using a system service.
-Example:
-http://<VM_PUBLIC_IP>:8501
-
-
 🛠️ Technologies Used
 
 Python
+
 Streamlit
+
 Azure Custom Vision
+
 Azure Virtual Machine (Ubuntu)
+
+Streamlit Cloud
+
 systemd
+
+REST APIs
+
 CSV file storage
 
-
-👩‍💻 Author
-
-Astha Kumari
+Git & GitHub (CI/CD)
