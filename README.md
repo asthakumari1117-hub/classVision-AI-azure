@@ -20,37 +20,29 @@ https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
 
 ---
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-Programming Language
+Programming Language: Python
 
-Python
+Web Framework: Streamlit
 
-Web Framework
+AI / Machine Learning: Azure Custom Vision
 
-Streamlit
-
-AI / Machine Learning
-
-Azure Custom Vision
-
-Cloud & Deployment
+Cloud & Deployment:
 
 Azure Virtual Machine (Ubuntu)
 
 Streamlit Cloud
 
-Backend & System
+Backend & System:
 
 REST APIs
 
 systemd (Linux service for auto-start)
 
-Data Storage
+Data Storage: CSV File Storage
 
-CSV File Storage
-
-Version Control & CI/CD
+Version Control & CI/CD:
 
 Git
 
