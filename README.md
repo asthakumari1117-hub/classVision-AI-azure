@@ -112,7 +112,7 @@ After the Azure subscription ended, the application was migrated to **Streamlit 
   - VS Code is closed
 - Ideal for demos, portfolios, and interviews
 
-Live App: https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
+Live App: [https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/](https://classvision-ai-azure-bks4oyfv5babztkptezacr.streamlit.app/)
 
 
 ---
