@@ -14,7 +14,7 @@ The project demonstrates **end-to-end AI + Cloud deployment**, including:
 ## 🚀 Live Demo
 
 🔗 **Streamlit Cloud (Current Deployment):**  
-https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/
+[https://classvision-ai-azure-xvws22afcwdp3ze3gcuwba.streamlit.app/](https://classvision-ai-azure-bks4oyfv5babztkptezacr.streamlit.app/)
 
 > The app is currently deployed on **Streamlit Cloud**, which automatically redeploys the latest code on every GitHub push.
 
